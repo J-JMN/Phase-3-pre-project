@@ -25,6 +25,9 @@ d4 = get_or_create(Dev, name="Diana")
 d5 = get_or_create(Dev, name="Eve")
 d6 = get_or_create(Dev, name="Frank")
 d7 = get_or_create(Dev, name="Grace")
+d8 = get_or_create(Dev, name="Heidi")
+d9 = get_or_create(Dev, name="Ivan")
+d10 = get_or_create(Dev, name="Judy")
 
 # Seed companies
 c1 = get_or_create(Company, name="Google", defaults={"founding_year": 1998})
@@ -34,6 +37,9 @@ c4 = get_or_create(Company, name="Meta", defaults={"founding_year": 2004})
 c5 = get_or_create(Company, name="Microsoft", defaults={"founding_year": 1975})
 c6 = get_or_create(Company, name="Amazon", defaults={"founding_year": 1994})
 c7 = get_or_create(Company, name="Apple", defaults={"founding_year": 1976})
+c8 = get_or_create(Company, name="Netflix", defaults={"founding_year": 1997})
+c9 = get_or_create(Company, name="Spotify", defaults={"founding_year": 2006})
+c10 = get_or_create(Company, name="Tesla", defaults={"founding_year": 2003})
 
 # Seed freebies with logic to prevent duplicates
 def create_freebie(item_name, value, company, dev):
@@ -55,5 +61,8 @@ create_freebie("T-Shirt", 15, c4, d4)
 create_freebie("Mug", 12, c5, d5)
 create_freebie("Water Bottle", 10, c6, d6)
 create_freebie("Headphones", 50, c7, d7)
+create_freebie("Gift Card", 25, c8, d8)
+create_freebie("Smartphone", 700, c9, d9)
+create_freebie("Smartwatch", 300, c10, d10)
 
 print("Database updated with new unique data!")
