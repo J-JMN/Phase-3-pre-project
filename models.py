@@ -1,7 +1,5 @@
 from sqlalchemy import create_engine, Column, Integer, String, ForeignKey
 from sqlalchemy.orm import declarative_base, sessionmaker, relationship
-from sqlalchemy import func # For aggregate functions like min()
-
 
 # --- Database Setup ---
 DATABASE_FILE = './freebie_app.db'
